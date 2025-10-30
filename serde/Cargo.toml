@@ -70,4 +70,4 @@ alloc = []
 # does not preserve identity and may result in multiple copies of the same data.
 # Be sure that this is what you want before enabling this feature.
 rc = []
-rustc-dep-of-std = ["core", "dep:alloc", "compiler_builtins/rustc-dep-of-std"]
+rustc-dep-of-std = ["core", "alloc", "compiler_builtins/rustc-dep-of-std"]
