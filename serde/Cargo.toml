@@ -17,7 +17,7 @@ rust-version = "1.31"
 [dependencies]
 serde_derive = { version = "1", optional = true, path = "../serde_derive" }
 core = { version = "1.0.0", optional = true, package = "rustc-std-workspace-core" }
-rustc-std-workspace-alloc = { version = "1.0.0", optional = true }
+alloc = { version = "1.0.0", optional = true, package = "rustc-std-workspace-alloc" }
 compiler_builtins = { version = "0.1.0", optional = true }
 
 [dev-dependencies]
@@ -70,4 +70,4 @@ alloc = []
 # does not preserve identity and may result in multiple copies of the same data.
 # Be sure that this is what you want before enabling this feature.
 rc = []
-rustc-dep-of-std = ["core", "rustc-std-workspace-alloc", "compiler_builtins/rustc-dep-of-std"]
+rustc-dep-of-std = ["core", "alloc", "compiler_builtins/rustc-dep-of-std"]
